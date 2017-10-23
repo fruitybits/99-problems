@@ -15,22 +15,22 @@ public class P02Test {
     @Test
     public void shouldFindSecondLastElementFromAList() throws Exception {
         List<Integer> numbers = asList(1, 2, 11, 4, 5, 8, 10, 6);
-        assertThat(P02.secondLast(numbers), is(equalTo(10)));
+        assertThat(P02_MySolution.secondLast(numbers), is(equalTo(10)));
     }
 
     @Test(expected = NoSuchElementException.class)
     public void shouldThrowExceptionWhenListEmpty() throws Exception {
-        P02.secondLast(Collections.emptyList());
+        P02_MySolution.secondLast(Collections.emptyList());
     }
 
     @Test(expected = NoSuchElementException.class)
     public void shouldThrowExceptionWhenListHasSingleElement() throws Exception {
-        P02.secondLast(Arrays.asList(1));
+        P02_MySolution.secondLast(Arrays.asList(1));
     }
 
     @Test
     public void shouldFindSecondLastElementFromALinkedList() throws Exception {
         LinkedList<Integer> numbers = linkedList(1, 2, 11, 4, 5, 8, 10, 6);
-        assertThat(P02.secondLastRecursion(numbers), is(equalTo(10)));
+        assertThat(P02_MySolution.secondLastRecursion(numbers), is(equalTo(10)));
     }
 }
